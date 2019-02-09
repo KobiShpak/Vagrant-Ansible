@@ -1,0 +1,3 @@
+- name: set web page content with the machine name
+  shell:  echo Hello from server `uname -n` | sudo tee /usr/share/nginx/html/index.html
+  notify: Restart Nginx

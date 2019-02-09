@@ -1,0 +1,4 @@
+---
+- name: copy nginx config file
+  template:  src=nginx-load-balancer.conf dest=/etc/nginx/sites-available/default
+  notify: Restart Nginx
